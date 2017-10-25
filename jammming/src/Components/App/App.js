@@ -12,7 +12,7 @@ import {Spotify} from '../../util/Spotify';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {searchResults: [], 
+    this.state = {searchResults: [{name:"Livin' On A Prayer", artist: "Bon Jovi", album: "1995"}], 
                    playlistName: "Cool Playlist",
                    playlistTracks: []
                  };

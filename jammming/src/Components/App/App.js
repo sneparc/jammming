@@ -59,6 +59,7 @@ class App extends Component {
 
     search(term){
       console.log(term);
+      Spotify.search()
     }
 
     render(){

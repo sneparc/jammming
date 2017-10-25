@@ -34,7 +34,7 @@ export const Spotify = {
       return response.json();
     }).then(jsonResponse=>{
       if(jsonResponse.tracks){
-        return jsonResponse.map(track=>({
+        return jsonResponse.tracks.items.map(track=>({
           id: track.id,
           name: track.name,
           artist: track.artists[0].name,
@@ -62,7 +62,7 @@ export const Spotify = {
         userId = jsonResponse.user_id;
       })
 
-    return fetch(`https://api.spotify.com/v1/users/" + userId + "/playlists`,
+    return fetch("https://api.spotify.com/v1/users/" + userId + "/playlists",
     {
       headers: {'Authorization': `Bearer ${accessToken}`},
       method: 'POST',
